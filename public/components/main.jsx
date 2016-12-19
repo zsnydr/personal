@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Navigation from './nav';
-import Footer from './footer';
+// import Footer from './footer';
 
 
 const Main = (props) => {
@@ -9,7 +9,6 @@ const Main = (props) => {
     <div>
       <Navigation />
       {props.children}
-      <Footer />
     </div>
   );
 };

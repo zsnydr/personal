@@ -4,7 +4,9 @@ import React from 'react';
 const Portfolio = () => {
   return (
     <div>
-      <div>PORTFOLIO</div>
+      <div>Project 1</div>
+      <div>Porject 2</div>
+      <div>Project 3</div>
     </div>
   );
 };

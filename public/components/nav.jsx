@@ -14,13 +14,13 @@ const Navigation = () => {
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="links" pullLeft onSelect={navigateTo}>
-            <NavItem eventKey="">HOME</NavItem>
+            <NavItem eventKey="">home</NavItem>
           </Nav>
           <Nav className="links" pullRight onSelect={navigateTo}>
-            <NavItem eventKey="about">ABOUT</NavItem>
-            <NavItem eventKey="blog">BLOG</NavItem>
-            <NavItem eventKey="portfolio">PORTFOLIO</NavItem>
-            <NavItem eventKey="resume">RESUME</NavItem>
+            <NavItem eventKey="about">about</NavItem>
+            <NavItem eventKey="blog">blog</NavItem>
+            <NavItem eventKey="portfolio">portfolio</NavItem>
+            <NavItem eventKey="resume">résumé</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
