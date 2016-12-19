@@ -6,5 +6,5 @@ node_modules/
 public/components/bower_components/
 
 ## config files ##
-config.js
+db/dbConfig.js
 .env
