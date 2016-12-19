@@ -9,11 +9,13 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const app = express();
 
+// const router = express.Router();
+
 const compiler = webpack(webpackConfig);
 
 app.set('port', process.env.PORT || 3000);
 
-app.use(express.static(path.join(__dirname, '/publicServed')));
+app.use(express.static(path.join(__dirname, '/dist')));
 // app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
 app.use(webpackDevMiddleware(compiler, {
@@ -28,6 +30,10 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// app.use('/api', router);
+
+// router(routes);
 
 app.listen(app.get('port'));
 console.log('Listening to port... ', app.get('port'));

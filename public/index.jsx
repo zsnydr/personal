@@ -2,45 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 
-const Main = (props) => {
-  return (
-    <div>
-      <Nav />
-      {props.children}
-      <Footer />
-    </div>
-  );
-};
+import Main from './components/main';
+import Home from './components/home';
+import About from './components/about';
 
-const Nav = () => {
-  return (
-    <div>NAV HERE</div>
-  );
-};
-
-const Footer = () => {
-  return (
-    <div>FOOTER HERE</div>
-  );
-};
-
-const Home = () => {
-  return (
-    <div>
-      <h1>HOME</h1>
-      <div onClick={() => { browserHistory.push('/about'); }}>TO ABOUT</div>
-    </div>
-  );
-};
-
-const About = () => {
-  return (
-    <div>
-      <div>ABOUT ME</div>
-      <div onClick={() => { browserHistory.push('/'); }}>BACK HOME</div>
-    </div>
-  );
-};
 
 const App = () => {
   return (

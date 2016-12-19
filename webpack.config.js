@@ -2,12 +2,13 @@ const path = require('path');
 // const webpack = require('webpack');
 
 module.exports = {
+  devtool: 'source-map',
   entry: [
     // 'webpack-hot-middleware/client',
     './public/index.jsx'
   ],
   output: {
-    path: path.resolve(__dirname, 'publicServed/'),
+    path: path.resolve(__dirname, 'dist/'),
     filename: 'bundle.js'
   },
   // plugins: [
@@ -32,5 +33,8 @@ module.exports = {
         presets: ['es2015'] // can add "es2015" to compile to es5
       }
     }]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 };
