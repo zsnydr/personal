@@ -32,16 +32,9 @@ module.exports = {
       query: {
         presets: ['es2015'] // can add "es2015" to compile to es5
       }
-    },
-    {
-      test: /\.scss$/,
-      loaders: ['style', 'css', 'sass']
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
-    alias: {
-      'bootstrap-sass$': 'bootstrap-sass/assets/stylesheets/bootstrap'
-    }
+    extensions: ['', '.js', '.jsx']
   }
 };
