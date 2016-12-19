@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Nav from './nav';
+import Navigation from './nav';
 import Footer from './footer';
 
 
 const Main = (props) => {
   return (
     <div>
-      <Nav />
+      <Navigation />
       {props.children}
       <Footer />
     </div>
