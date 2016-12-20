@@ -8,6 +8,12 @@ const Project = bookshelf.Model.extend({
   hasTimestamps: true
 });
 
+const BlogPost = bookshelf.Model.extend({
+  tableName: 'blogPosts',
+  hasTimestamps: true
+});
+
 module.exports = {
-  Project
+  Project,
+  BlogPost
 };

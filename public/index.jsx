@@ -5,7 +5,7 @@ import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 import Main from './components/main';
 import Home from './components/home';
 import About from './components/about';
-import Blog from './components/blog';
+import Blog from './blog/components/blog';
 import Portfolio from './portfolio/components/portfolio';
 import Resume from './components/resume';
 
