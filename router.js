@@ -1,5 +1,5 @@
 const routeHelpers = require('./routeHelpers');
 
 module.exports = (app) => {
-  app.get('/api/projects', routeHelpers.getProjects);
+  app.get('/projects', routeHelpers.getProjects);
 };
