@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import Project from './project';
 
@@ -23,3 +23,8 @@ const ProjectList = ({ projects, setActiveProject }) => {
 };
 
 export default ProjectList;
+
+ProjectList.propTypes = {
+  projects: PropTypes.array,
+  setActiveProject: PropTypes.func
+};

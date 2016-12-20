@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
 const Project = ({ project }) => {
@@ -14,3 +14,7 @@ const Project = ({ project }) => {
 };
 
 export default Project;
+
+Project.propTypes = {
+  project: PropTypes.object
+};
