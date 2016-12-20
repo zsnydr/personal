@@ -20,8 +20,8 @@ class Portfolio extends Component {
       .get('/api/projects')
       .end((err, results) => {
         if (err) console.log('Error getting projects: ', err);
-        console.log('Results getting projects: ', results);
-        this.setState({ projects: results, activeProject: results[0] });
+        console.log('Results getting projects: ', results.body);
+        this.setState({ projects: results.body, activeProject: results.body[0] });
       });
   }
 
