@@ -10,5 +10,15 @@ module.exports = {
     .catch((err) => {
       res.status(400).send(err);
     });
+  },
+
+  getBlogPosts: (req, res) => {
+    dbHelpers.getBlogPosts()
+    .then((posts) => {
+      res.json(posts);
+    })
+    .catch((err) => {
+      res.status(400).send(err);
+    });
   }
 };
