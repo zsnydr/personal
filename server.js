@@ -7,11 +7,11 @@ const webpackConfig = require('./webpack.config');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 // const webpackHotMiddleware = require('webpack-hot-middleware');
 
+const router = require('./router');
+
 
 const app = express();
-
-// const router = express.Router();
-
+const expressRouter = express.Router();
 const compiler = webpack(webpackConfig);
 
 app.set('port', process.env.PORT || 3000);
@@ -31,10 +31,8 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// app.use('/api', router);
-
-// router(routes);
+app.use('/api', expressRouter);
+router(expressRouter);
 
 app.listen(app.get('port'));
 console.log('Listening to port... ', app.get('port'));
