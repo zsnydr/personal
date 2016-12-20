@@ -13,6 +13,8 @@ class Portfolio extends Component {
       projects: [],
       activeProject: null
     };
+
+    this.setActiveProject = this.setActiveProject.bind(this);
   }
 
   componentDidMount() {
@@ -25,6 +27,10 @@ class Portfolio extends Component {
       });
   }
 
+  setActiveProject(project) {
+    this.setState({ activeProject: project });
+  }
+
   render() {
     if (!this.state.projects.length) {
       return <div>Waiting for projects...</div>;
@@ -32,7 +38,7 @@ class Portfolio extends Component {
 
     return (
       <div>
-        <ProjectList projects={this.state.projects} />
+        <ProjectList projects={this.state.projects} setActiveProject={this.setActiveProject} />
         <ActiveProject project={this.state.activeProject} />
       </div>
     );

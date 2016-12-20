@@ -3,10 +3,14 @@ import React from 'react';
 import Project from './project';
 
 
-const ProjectList = (props) => {
+const ProjectList = ({ projects, setActiveProject }) => {
   const mapProjects = () => {
-    return props.projects.map((project) => {
-      return <div key={project.id}><Project project={project} /></div>;
+    return projects.map((project) => {
+      return (
+        <div key={project.id} onClick={() => { setActiveProject(project); }}>
+          <Project project={project} setActiveProject={setActiveProject} />
+        </div>
+      );
     })
     .sort((a, b) => { return a.id > b.id; });
   };
