@@ -6,7 +6,7 @@ import Main from './components/main';
 import Home from './components/home';
 import About from './components/about';
 import Blog from './components/blog';
-import Portfolio from './components/portfolio';
+import Portfolio from './portfolio/components/portfolio';
 import Resume from './components/resume';
 
 
