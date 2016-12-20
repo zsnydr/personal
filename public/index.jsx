@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 
-import Main from './components/main';
-import Home from './components/home';
-import About from './components/about';
+import Main from './main/components/main';
+import Home from './home/components/home';
+import About from './about';
 import Blog from './blog/components/blog';
 import Portfolio from './portfolio/components/portfolio';
-import Resume from './components/resume';
+import Resume from './resume/components/resume';
 
 
 const App = () => {
