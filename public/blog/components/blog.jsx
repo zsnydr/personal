@@ -1,5 +1,6 @@
 import request from 'superagent';
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
 import BlogPostList from './blogPostList';
 
@@ -11,6 +12,8 @@ class Blog extends Component {
     this.state = {
       posts: []
     };
+
+    this.navToArticle = this.navToArticle.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +26,11 @@ class Blog extends Component {
       });
   }
 
+  navToArticle(post) {
+    // set active article to post
+    browserHistory.push('/article');
+  }
+
   render() {
     if (!this.state.posts.length) {
       return (
@@ -32,7 +40,7 @@ class Blog extends Component {
 
     return (
       <div>
-        <BlogPostList posts={this.state.posts} />
+        <BlogPostList posts={this.state.posts} navToArticle={this.navToArticle} />
       </div>
     );
   }

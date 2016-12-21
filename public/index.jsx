@@ -6,6 +6,7 @@ import Main from './main/components/main';
 import Home from './home/components/home';
 import About from './about';
 import Blog from './blog/components/blog';
+import Article from './article/components/article';
 import Portfolio from './portfolio/components/portfolio';
 import Resume from './resume/components/resume';
 
@@ -17,6 +18,7 @@ const App = () => {
         <IndexRoute component={Home} />
         <Router path="/about" component={About} />
         <Router path="/blog" component={Blog} />
+        <Router path="/article" component={Article} />
         <Router path="/portfolio" component={Portfolio} />
         <Router path="/resume" component={Resume} />
       </Route>

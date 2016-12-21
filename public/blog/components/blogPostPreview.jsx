@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 
 
-const BlogPostPreview = ({ post }) => {
+const BlogPostPreview = ({ post, navToArticle }) => {
   return (
-    <div>
+    <div onClick={() => { navToArticle(post); }}>
       <h1>{post.title}</h1>
       <p>{post.summary}</p>
       <p>{post.postDate}</p>
@@ -14,5 +14,6 @@ const BlogPostPreview = ({ post }) => {
 export default BlogPostPreview;
 
 BlogPostPreview.propTypes = {
-  post: PropTypes.object
+  post: PropTypes.object,
+  navToArticle: PropTypes.func
 };

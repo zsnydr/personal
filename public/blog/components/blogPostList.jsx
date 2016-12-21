@@ -3,10 +3,10 @@ import React, { PropTypes } from 'react';
 import BlogPostPreview from './blogPostPreview';
 
 
-const BlogPostList = ({ posts }) => {
+const BlogPostList = ({ posts, navToArticle }) => {
   const mapBlogPosts = () => {
     return posts.map((post) => {
-      return <div key={post.id}><BlogPostPreview post={post} /></div>;
+      return <BlogPostPreview post={post} navToArticle={navToArticle} />;
     });
   };
 
@@ -20,5 +20,6 @@ const BlogPostList = ({ posts }) => {
 export default BlogPostList;
 
 BlogPostList.propTypes = {
-  posts: PropTypes.array
+  posts: PropTypes.array,
+  navToArticle: PropTypes.func
 };
