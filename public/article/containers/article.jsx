@@ -7,7 +7,6 @@ import React, { Component, PropTypes } from 'react';
 import ArticleHeader from '../components/articleHeader';
 import ArticleBody from '../components/articleBody';
 
-import updateActivePost from '../../actions/action_activePost';
 import updateBlogPosts from '../../actions/action_blogPosts';
 
 
@@ -59,22 +58,20 @@ class Article extends Component {
   }
 }
 
-function mapStateToProps({ blogPosts, activePost }) {
+function mapStateToProps({ blogPosts }) {
   return {
-    activePost,
     blogPosts
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ updateBlogPosts, updateActivePost }, dispatch);
+  return bindActionCreators({ updateBlogPosts }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Article);
 
 Article.propTypes = {
   updateBlogPosts: PropTypes.func,
-  // activePost: PropTypes.number,
   blogPosts: PropTypes.array,
   location: PropTypes.object
 };

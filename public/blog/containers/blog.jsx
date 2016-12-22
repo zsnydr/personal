@@ -5,7 +5,6 @@ import React, { Component, PropTypes } from 'react';
 import { browserHistory } from 'react-router';
 
 import updateBlogPosts from '../../actions/action_blogPosts';
-import updateActivePost from '../../actions/action_activePost';
 
 import BlogPostList from '../components/blogPostList';
 
@@ -29,7 +28,6 @@ class Blog extends Component {
 
   navToArticle(post) {
     const index = this.props.blogPosts.indexOf(post);
-    // this.props.updateActivePost(index);
     browserHistory.push(`/article?id=${index}`);
   }
 
@@ -48,21 +46,19 @@ class Blog extends Component {
   }
 }
 
-function mapStateToProps({ blogPosts, activePost }) {
+function mapStateToProps({ blogPosts }) {
   return {
-    blogPosts,
-    activePost
+    blogPosts
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ updateBlogPosts, updateActivePost }, dispatch);
+  return bindActionCreators({ updateBlogPosts }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Blog);
 
 Blog.propTypes = {
   updateBlogPosts: PropTypes.func,
-  // updateActivePost: PropTypes.func,
   blogPosts: PropTypes.array
 };
