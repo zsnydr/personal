@@ -30,8 +30,14 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.use('/api', expressRouter);
 router(expressRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/dist/index.html'));
+  // res.redirect(`/#/article?id=${req.query.id}`);
+});
 
 app.listen(app.get('port'));
 console.log('Listening to port... ', app.get('port'));

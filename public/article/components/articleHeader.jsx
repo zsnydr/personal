@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
 const ArticleHeader = ({ post }) => {
@@ -10,3 +10,7 @@ const ArticleHeader = ({ post }) => {
 };
 
 export default ArticleHeader;
+
+ArticleHeader.propTypes = {
+  post: PropTypes.object
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
 const ArticleBody = ({ post }) => {
@@ -10,3 +10,7 @@ const ArticleBody = ({ post }) => {
 };
 
 export default ArticleBody;
+
+ArticleBody.propTypes = {
+  post: PropTypes.object
+};

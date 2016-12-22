@@ -9,8 +9,8 @@ import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 import Main from './main/components/main';
 import Home from './home/components/home';
 import About from './about';
-import Blog from './blog/components/blog';
-import Article from './article/components/article';
+import Blog from './blog/containers/blog';
+import Article from './article/containers/article';
 import Portfolio from './portfolio/components/portfolio';
 import Resume from './resume/components/resume';
 
