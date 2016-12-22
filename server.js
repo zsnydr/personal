@@ -17,7 +17,6 @@ const compiler = webpack(webpackConfig);
 app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(path.join(__dirname, '/dist')));
-// app.use('/assets', express.static(path.join(__dirname, '/assets')));
 
 app.use(webpackDevMiddleware(compiler, {
   publicPath: webpackConfig.output.publicPath
@@ -31,8 +30,14 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 app.use('/api', expressRouter);
 router(expressRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/dist/index.html'));
+  // res.redirect(`/#/article?id=${req.query.id}`);
+});
 
 app.listen(app.get('port'));
 console.log('Listening to port... ', app.get('port'));
