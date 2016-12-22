@@ -41,5 +41,5 @@ const App = () => {
 
 ReactDOM.render(
   <App />,
-  document.querySelector('.main')
+  document.querySelector('.app')
 );

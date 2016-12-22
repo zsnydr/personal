@@ -39,7 +39,7 @@ class Blog extends Component {
     }
 
     return (
-      <div>
+      <div className="blog">
         <BlogPostList posts={this.props.blogPosts} navToArticle={this.navToArticle} />
       </div>
     );

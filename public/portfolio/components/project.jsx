@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 
 
-const Project = ({ project }) => {
+const Project = ({ project, setActiveProject }) => {
   return (
-    <div>
+    <div className="project" onClick={() => { setActiveProject(project); }}>
       <h3>{project.title}</h3>
       <p>{project.summary}</p>
       <p>{project.description}</p>
@@ -16,5 +16,6 @@ const Project = ({ project }) => {
 export default Project;
 
 Project.propTypes = {
+  setActiveProject: PropTypes.func,
   project: PropTypes.object
 };

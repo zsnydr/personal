@@ -6,7 +6,7 @@ import Navigation from './nav';
 
 const Main = (props) => {
   return (
-    <div>
+    <div className="main">
       <Navigation />
       {props.children}
     </div>

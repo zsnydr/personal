@@ -13,7 +13,7 @@ const navigateTo = (eventKey) => {
 
 const Navigation = () => {
   return (
-    <div>
+    <div className="nav">
       <Navbar collapseOnSelect>
         <Navbar.Toggle />
         <Navbar.Collapse>

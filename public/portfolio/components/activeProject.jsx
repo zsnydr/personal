@@ -3,7 +3,9 @@ import React, { PropTypes } from 'react';
 
 const ActiveProject = ({ project }) => {
   return (
-    <h1>{project.title}</h1>
+    <div className="active-project">
+      <h1>{project.title}</h1>
+    </div>
   );
 };
 

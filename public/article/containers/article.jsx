@@ -48,7 +48,7 @@ class Article extends Component {
     }
 
     return (
-      <div>
+      <div className="article">
         <ArticleHeader post={this.props.blogPosts[this.props.location.query.id]} />
         <ArticleBody post={this.props.blogPosts[this.props.location.query.id]} />
         <button onClick={this.prevArticle}>previous</button>
