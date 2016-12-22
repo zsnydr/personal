@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const ArticleBody = () => {
+const ArticleBody = ({ post }) => {
   return (
     <div>
-      <p>body</p>
+      <p>{post.body}</p>
     </div>
   );
 };

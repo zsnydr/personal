@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const ArticleHeader = () => {
+const ArticleHeader = ({ post }) => {
   return (
     <div>
-      <h1>Header</h1>
+      <h1>{post.title}</h1>
     </div>
   );
 };
