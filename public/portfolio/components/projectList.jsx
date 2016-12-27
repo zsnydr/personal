@@ -12,7 +12,7 @@ const ProjectList = ({ projects, setActiveProject }) => {
   };
 
   return (
-    <div className="project-list">
+    <div className="portfolio-project-list">
       {mapProjects()}
     </div>
   );
