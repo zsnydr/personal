@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 
 const ArticleBody = ({ post }) => {
   return (
-    <div>
+    <div className="article-body">
       <p>{post.body}</p>
     </div>
   );

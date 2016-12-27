@@ -36,7 +36,6 @@ router(expressRouter);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/index.html'));
-  // res.redirect(`/#/article?id=${req.query.id}`);
 });
 
 app.listen(app.get('port'));

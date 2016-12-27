@@ -6,16 +6,12 @@ import BlogPostPreview from './blogPostPreview';
 const BlogPostList = ({ posts, navToArticle }) => {
   const mapBlogPosts = () => {
     return posts.map((post) => {
-      return (
-        <div key={post.id}>
-          <BlogPostPreview post={post} navToArticle={navToArticle} />
-        </div>
-      );
+      return <BlogPostPreview key={post.id} post={post} navToArticle={navToArticle} />;
     });
   };
 
   return (
-    <div>
+    <div className="blog-post-list">
       {mapBlogPosts()}
     </div>
   );

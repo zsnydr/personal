@@ -5,7 +5,8 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     // 'webpack-hot-middleware/client',
-    './public/index.jsx'
+    './public/index.jsx',
+    './public/styles/index.scss'
   ],
   output: {
     path: path.resolve(__dirname, 'dist/'),
@@ -32,9 +33,16 @@ module.exports = {
       query: {
         presets: ['es2015'] // can add "es2015" to compile to es5
       }
+    },
+    {
+      test: /\.scss$/,
+      loaders: ['style', 'css', 'sass']
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    alias: {
+      'bootstrap-sass$': 'bootstrap-sass/assets/stylesheets/bootstrap'
+    }
   }
 };

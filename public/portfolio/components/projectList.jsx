@@ -6,17 +6,13 @@ import Project from './project';
 const ProjectList = ({ projects, setActiveProject }) => {
   const mapProjects = () => {
     return projects.map((project) => {
-      return (
-        <div key={project.id} onClick={() => { setActiveProject(project); }}>
-          <Project project={project} setActiveProject={setActiveProject} />
-        </div>
-      );
+      return <Project key={project.id} project={project} setActiveProject={setActiveProject} />;
     })
     .sort((a, b) => { return a.id > b.id; });
   };
 
   return (
-    <div>
+    <div className="project-list">
       {mapProjects()}
     </div>
   );

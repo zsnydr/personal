@@ -36,7 +36,7 @@ class Portfolio extends Component {
     }
 
     return (
-      <div>
+      <div className="portfolio">
         <ProjectList projects={this.state.projects} setActiveProject={this.setActiveProject} />
         <ActiveProject project={this.state.activeProject} />
       </div>
