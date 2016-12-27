@@ -1,0 +1,27 @@
+.portfolio {
+  position: relative;
+  height: 95%;
+  width: 97%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+
+  .portfolio-project-list {
+    position: relative;
+    display: inline-block;
+    margin: 0 5% 0 5%;
+    height: 100%;
+    width: 40%;
+    float: left;
+
+    .portfolio-project {
+
+    }
+  }
+
+  .portfolio-active-project {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+  }
+}
