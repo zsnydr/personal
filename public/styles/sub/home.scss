@@ -1,0 +1,23 @@
+.home {
+  position: relative;
+  height: 95%;
+  width: 97%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  background-image: url('https://images5.alphacoders.com/488/488612.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .home-content {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
