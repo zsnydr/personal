@@ -1,5 +1,5 @@
-const Project = require('./db/models').Project;
-const BlogPost = require('./db/models').BlogPost;
+const Project = require('../db/models').Project;
+const BlogPost = require('../db/models').BlogPost;
 
 
 module.exports = {
