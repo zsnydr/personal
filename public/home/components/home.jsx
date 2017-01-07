@@ -24,10 +24,10 @@ const Home = () => {
           <hr />
           <h3>Software Engineer</h3>
         </div>
-        <div className="home-arrow-down" onClick={scrollDown}></div>
+        <div className="home-arrow-down" onClick={scrollDown} />
       </div>
       <div className="home-about-me">
-        <div className="home-arrow-up" onClick={scrollUp}></div>
+        <div className="home-arrow-up" onClick={scrollUp} />
         ABOUT ME WITH PIC
       </div>
     </div>
