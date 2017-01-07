@@ -1,16 +1,25 @@
 .nav {
   position: relative;
-  width: auto;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 
   .nav-bar {
     background-color: white;
+    border-radius: 0;
     border: none;
     margin: 0;
 
+    .about-links {
+      font-size: 24px;
+    }
+
     li {
+      font-size: 16px;
 
       a {
         color: #8A9299;
+        // color: #388E8E;
+
       }
     }
   }

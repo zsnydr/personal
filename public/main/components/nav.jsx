@@ -20,10 +20,12 @@ const Navigation = () => {
           <Nav className="links" pullLeft onSelect={navigateTo}>
             <NavItem eventKey="">home</NavItem>
           </Nav>
-          <Nav className="links" pullRight onSelect={navigateTo}>
+          <Nav className="links" onSelect={navigateTo}>
             <NavItem eventKey="blog">blog</NavItem>
             <NavItem eventKey="portfolio">portfolio</NavItem>
-            <NavItem eventKey="resume">résumé</NavItem>
+            <NavItem eventKey="resume">resume</NavItem>
+          </Nav>
+          <Nav className="links" pullRight onSelect={navigateTo}>
             <NavItem eventKey="https://github.com/zsnydr">
               <i className="fa fa-github about-links" />
             </NavItem>
