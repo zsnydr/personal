@@ -1,16 +1,28 @@
 .nav {
-  position: relative;
-  width: auto;
+  // top: 0;
+  // left: 0;
+  // z-index: 9999;
 
   .nav-bar {
+    margin-right: 3.8%;
+    margin-left: 2.5%;
+    width: 93.7%;
     background-color: white;
+    border-radius: 0;
     border: none;
-    margin: 0;
+    // margin: 0;
+
+    .about-links {
+      font-size: 24px;
+    }
 
     li {
+      font-size: 16px;
 
       a {
         color: #8A9299;
+        // color: #388E8E;
+
       }
     }
   }
