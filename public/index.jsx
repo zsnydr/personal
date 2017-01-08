@@ -8,7 +8,6 @@ import { Route, Router, IndexRoute, browserHistory } from 'react-router';
 
 import Main from './main/components/main';
 import Home from './home/components/home';
-import About from './about';
 import Blog from './blog/containers/blog';
 import Article from './article/containers/article';
 import Portfolio from './portfolio/components/portfolio';
@@ -27,7 +26,6 @@ const App = () => {
       <Router history={history}>
         <Route path="/" component={Main}>
           <IndexRoute component={Home} />
-          <Router path="/about" component={About} />
           <Router path="/blog" component={Blog} />
           <Router path="/article" component={Article} />
           <Router path="/portfolio" component={Portfolio} />

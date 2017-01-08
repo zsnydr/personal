@@ -1,6 +1,9 @@
 import React from 'react';
 import { polyfill } from 'smoothscroll-polyfill';
 
+import About from './about';
+
+
 polyfill();
 
 const Home = () => {
@@ -11,7 +14,7 @@ const Home = () => {
   };
 
   const scrollUp = () => {
-    document.querySelector('.home-border').scrollIntoView({
+    document.querySelector('.nav').scrollIntoView({
       behavior: 'smooth'
     });
   };
@@ -26,9 +29,11 @@ const Home = () => {
         </div>
         <div className="home-arrow-down" onClick={scrollDown} />
       </div>
-      <div className="home-about-me">
-        <div className="home-arrow-up" onClick={scrollUp} />
-        ABOUT ME WITH PIC
+      <div className="home-border2">
+        <div className="home-about-me">
+          <div className="home-arrow-up" onClick={scrollUp} />
+          <About />
+        </div>
       </div>
     </div>
   );
