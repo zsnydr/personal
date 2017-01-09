@@ -1,13 +1,14 @@
-const Project = require('../db/models').Project;
-const BlogPost = require('../db/models').BlogPost;
+const db = require('../mongo/connection');
+const Project = require('../mongo/models').Project;
+const BlogPost = require('../mongo/models').BlogPost;
 
 
 module.exports = {
   getProjects: () => {
-    return Project.fetchAll();
+    return Project.find();
   },
 
   getBlogPosts: () => {
-    return BlogPost.fetchAll();
+    return BlogPost.find();
   }
 };
