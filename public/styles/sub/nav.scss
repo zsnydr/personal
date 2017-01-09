@@ -1,16 +1,13 @@
 .nav {
-  // top: 0;
-  // left: 0;
-  // z-index: 9999;
+  position: relative;
 
   .nav-bar {
-    margin-right: 3.8%;
-    margin-left: 2.5%;
-    width: 93.7%;
+    position: fixed;
+    width: 94%;
     background-color: white;
     border-radius: 0;
     border: none;
-    // margin: 0;
+    margin: 0% 2.5%;
 
     .about-links {
       font-size: 24px;

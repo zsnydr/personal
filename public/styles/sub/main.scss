@@ -1,7 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .main {
-  position: absolute;
+  // position: absolute;
+  padding: 4.5% 2.5% 0% 2.5%;
+  background-color:#E9EAEE;
+  overflow: auto;
   height: 100%;
   width: 100%;
-  overflow: auto;
-  background-color:#E9EAEE;
 }

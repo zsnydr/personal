@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="home-border">
+      <div className="home-big-image">
         <div className="home-content">
           <h1>Zack Snyder</h1>
           <hr />
@@ -29,14 +29,14 @@ const Home = () => {
         </div>
         <div className="home-arrow-down" onClick={scrollDown} />
       </div>
-      <div className="home-border2">
-        <div className="home-about-me">
-          <div className="home-arrow-up" onClick={scrollUp} />
-          <About />
-        </div>
-      </div>
     </div>
   );
 };
 
+// <div className="home-border2">
+//   <div className="home-about-me">
+//     <div className="home-arrow-up" onClick={scrollUp} />
+//     <About />
+//   </div>
+// </div>
 export default Home;
