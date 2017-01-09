@@ -4,7 +4,7 @@ import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 
 const navigateTo = (eventKey) => {
-  if (eventKey.substring(0, 5) === 'https') {
+  if (eventKey.substring(0, 5) === 'https' || eventKey === 'ZackSnyder_Resume.pdf') {
     window.location = eventKey;
     return;
   }
@@ -14,7 +14,7 @@ const navigateTo = (eventKey) => {
 const Navigation = () => {
   return (
     <div className="nav">
-      <Navbar collapseOnSelect className="nav-bar navbar-fixed-top">
+      <Navbar collapseOnSelect className="nav-bar navbar navbar-default navbar-fixed-top">
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="links" pullLeft onSelect={navigateTo}>
@@ -23,7 +23,7 @@ const Navigation = () => {
           <Nav className="links" onSelect={navigateTo}>
             <NavItem eventKey="blog">blog</NavItem>
             <NavItem eventKey="portfolio">portfolio</NavItem>
-            <NavItem eventKey="resume">resume</NavItem>
+            <NavItem eventKey="ZackSnyder_Resume.pdf">resume</NavItem>
           </Nav>
           <Nav className="links" pullRight onSelect={navigateTo}>
             <NavItem eventKey="https://github.com/zsnydr">

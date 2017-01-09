@@ -29,13 +29,13 @@ const App = () => {
           <Router path="/blog" component={Blog} />
           <Router path="/article" component={Article} />
           <Router path="/portfolio" component={Portfolio} />
-          <Router path="/resume" component={Resume} />
         </Route>
       </Router>
     </Provider>
   );
 };
 
+// <Router path="/resume" component={Resume} />
 
 ReactDOM.render(
   <App />,

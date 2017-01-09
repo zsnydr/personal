@@ -38,6 +38,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
 
+// app.use(fallback('/dist/index.html', { root }));
+
 app.listen(app.get('port'));
 console.log('Listening to port... ', app.get('port'));
 

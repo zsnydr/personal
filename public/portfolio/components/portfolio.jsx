@@ -32,7 +32,7 @@ class Portfolio extends Component {
 
   render() {
     if (!this.state.projects.length) {
-      return <div>Waiting for projects...</div>;
+      return <div className="portfolio" />;
     }
 
     return (
