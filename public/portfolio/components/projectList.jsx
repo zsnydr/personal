@@ -6,9 +6,9 @@ import Project from './project';
 const ProjectList = ({ projects, setActiveProject }) => {
   const mapProjects = () => {
     return projects.map((project) => {
-      return <Project key={project.id} project={project} setActiveProject={setActiveProject} />;
+      return <Project key={project._id} project={project} setActiveProject={setActiveProject} />;
     })
-    .sort((a, b) => { return a.id > b.id; });
+    .sort((a, b) => { return a._id > b._id; });
   };
 
   return (
