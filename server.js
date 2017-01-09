@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
 const webpackDevMiddleware = require('webpack-dev-middleware');
-// const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const router = require('./server/router');
+const db = require('./mongo/connection');
 
 
 const app = express();
@@ -38,9 +38,13 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
 
-// app.use(fallback('/dist/index.html', { root }));
+db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 
-app.listen(app.get('port'));
-console.log('Listening to port... ', app.get('port'));
+db.once('open', () => {
+  console.log('MongoDB connection established');
+  app.listen(app.get('port'));
+  console.log('Listening to port... ', app.get('port'));
+});
+
 
 module.exports = app;
