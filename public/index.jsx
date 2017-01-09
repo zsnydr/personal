@@ -11,7 +11,6 @@ import Home from './home/components/home';
 import Blog from './blog/containers/blog';
 import Article from './article/containers/article';
 import Portfolio from './portfolio/components/portfolio';
-import Resume from './resume/components/resume';
 
 import rootReducer from './reducers';
 
@@ -29,6 +28,7 @@ const App = () => {
           <Router path="/blog" component={Blog} />
           <Router path="/article" component={Article} />
           <Router path="/portfolio" component={Portfolio} />
+          <Router path="*" component={Home} />
         </Route>
       </Router>
     </Provider>

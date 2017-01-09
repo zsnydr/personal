@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { browserHistory } from 'react-router';
 import { polyfill } from 'smoothscroll-polyfill';
 
 import About from './about';
@@ -6,7 +7,11 @@ import About from './about';
 
 polyfill();
 
-const Home = () => {
+const Home = (props) => {
+  if (props.location.pathname !== '/') {
+    browserHistory.push('');
+  }
+
   const scrollDown = () => {
     document.querySelector('.home-about-me').scrollIntoView({
       behavior: 'smooth'
@@ -40,3 +45,7 @@ const Home = () => {
 //   </div>
 // </div>
 export default Home;
+
+Home.propTypes = {
+  location: PropTypes.object
+};
