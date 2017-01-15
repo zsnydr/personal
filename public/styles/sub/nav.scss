@@ -1,13 +1,15 @@
-.nav {
-  position: relative;
+// .nav {
+//   // position: relative;
+//   height: 5%;
 
   .nav-bar {
-    position: fixed;
-    width: 94%;
+    // position: fixed;
+    width: 84.21%;
     background-color: white;
     border-radius: 0;
     border: none;
-    margin: 0% 2.5%;
+    margin: 0 auto;
+    padding: 0;
 
     .about-links {
       font-size: 24px;
@@ -23,4 +25,4 @@
       }
     }
   }
-}
+// }

@@ -1,47 +1,47 @@
 .home {
-  position: relative;
+  // position: relative;
   height: 200%;
   width: 100%;
-  background-color: white;
-  margin: 0;
+  // background-color: white;
+  // margin: 0;
 
   .home-big-image {
-    position: absolute;
+    // position: absolute;
     background-image: url('http://i.imgur.com/e4lFPdh.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 .75%;
-    width: 98.5%;
-    height: 47%;
+    // margin: 0 .75%;
+    // width: 98.5%;
+    // height: 47%;
 
-    .home-content {
-      position: absolute;
-      margin: 23% 20%;
-      width: 60%;
-      text-align: center;
-      color: white;
-
-      h1 {
-        margin: 0;
-      }
-    }
-
-    .home-arrow-down {
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 20px solid rgba(255, 255, 255, 0.5);
-      bottom: 3%;
-      left: 48%;
-
-      &:hover {
-        border-top: 20px solid rgba(0, 0, 0, 0.4);
-        cursor: pointer;
-      }
-    }
-  }
+  //   .home-content {
+  //     position: absolute;
+  //     margin: 23% 20%;
+  //     width: 60%;
+  //     text-align: center;
+  //     color: white;
+  //
+  //     h1 {
+  //       margin: 0;
+  //     }
+  //   }
+  //
+  //   .home-arrow-down {
+  //     position: absolute;
+  //     width: 0;
+  //     height: 0;
+  //     border-left: 20px solid transparent;
+  //     border-right: 20px solid transparent;
+  //     border-top: 20px solid rgba(255, 255, 255, 0.5);
+  //     bottom: 3%;
+  //     left: 48%;
+  //
+  //     &:hover {
+  //       border-top: 20px solid rgba(0, 0, 0, 0.4);
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
 
   // .home-border2 {
   //   background-color: white;
@@ -92,5 +92,5 @@
   //       }
   //     }
   //   }
-  // }
+  }
 }
