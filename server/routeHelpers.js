@@ -3,6 +3,7 @@ const dbHelpers = require('./dbHelpers');
 
 module.exports = {
   getProjects: (req, res) => {
+    console.log('getProjects ', req)
     dbHelpers.getProjects()
     .then((projects) => {
       res.json(projects);
@@ -16,6 +17,16 @@ module.exports = {
     dbHelpers.getBlogPosts()
     .then((posts) => {
       res.json(posts);
+    })
+    .catch((err) => {
+      res.status(400).send(err);
+    });
+  },
+
+  getActivePost: (req, res) => {
+    dbHelpers.getActivePost(req)
+    .then((posts) => {
+      res.json(posts[0]);
     })
     .catch((err) => {
       res.status(400).send(err);

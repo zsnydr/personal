@@ -9,6 +9,7 @@ const ProjectSchema = mongoose.Schema({
 });
 
 const BlogPostSchema = mongoose.Schema({
+  pathTitle: String,
   title: String,
   summary: String,
   body: String,

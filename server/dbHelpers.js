@@ -9,5 +9,9 @@ module.exports = {
 
   getBlogPosts: () => {
     return BlogPost.find();
+  },
+
+  getActivePost: (req) => {
+    return BlogPost.find({ pathTitle: req.query.pathTitle });
   }
 };

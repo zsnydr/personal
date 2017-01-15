@@ -26,9 +26,8 @@ class Blog extends Component {
       });
   }
 
-  navToArticle(post) {
-    const index = this.props.blogPosts.indexOf(post);
-    browserHistory.push(`/article?id=${index}`);
+  navToArticle(pathTitle) {
+    browserHistory.push(`/blog/${pathTitle}`);
   }
 
   render() {
