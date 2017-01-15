@@ -1,47 +1,28 @@
 import request from 'superagent';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
 import React, { Component, PropTypes } from 'react';
 
 import ArticleHeader from '../components/articleHeader';
 import ArticleBody from '../components/articleBody';
 
-import updateBlogPosts from '../../actions/action_blogPosts';
+import updateActivePost from '../../actions/action_activePost';
 
 
 class Article extends Component {
-  constructor(props) {
-    super(props);
-
-    this.prevArticle = this.prevArticle.bind(this);
-    this.nextArticle = this.nextArticle.bind(this);
-  }
 
   componentDidMount() {
-    if (!this.props.blogPosts.length) {
-      request
-      .get('/api/blogPosts')
-      .end((err, results) => {
-        if (err) console.log('Error getting blog posts: ', err);
-        const sortedResults = results.body.sort((a, b) => { return b.postDate > a.postDate; });
-        this.props.updateBlogPosts(sortedResults);
-      });
-    }
-  }
-
-  prevArticle() {
-    // this.props.updateActivePost(this.props.activePost - 1);
-    browserHistory.push(`/article?id=${Number(this.props.location.query.id) - 1}`);
-  }
-
-  nextArticle() {
-    // this.props.updateActivePost(this.props.activePost + 1);
-    browserHistory.push(`/article?id=${Number(this.props.location.query.id) + 1}`);
+    request
+    .get('/api/activePost')
+    .query({ pathTitle: this.props.location.pathname.substring(6) })
+    .end((err, results) => {
+      if (err) console.log('Error getting blog posts: ', err);
+      this.props.updateActivePost(results.body);
+    });
   }
 
   render() {
-    if (this.props.location.query.id === undefined || !this.props.blogPosts.length) {
+    if (!this.props.activePost || this.props.activePost.pathTitle !== this.props.location.pathname.substring(6)) {
       return (
         <div>No active blog post</div>
       );
@@ -49,29 +30,27 @@ class Article extends Component {
 
     return (
       <div className="article">
-        <ArticleHeader post={this.props.blogPosts[this.props.location.query.id]} />
-        <ArticleBody post={this.props.blogPosts[this.props.location.query.id]} />
-        <button onClick={this.prevArticle}>previous</button>
-        <button onClick={this.nextArticle}>next</button>
+        <ArticleHeader post={this.props.activePost} />
+        <ArticleBody post={this.props.activePost} />
       </div>
     );
   }
 }
 
-function mapStateToProps({ blogPosts }) {
+function mapStateToProps({ activePost }) {
   return {
-    blogPosts
+    activePost
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ updateBlogPosts }, dispatch);
+  return bindActionCreators({ updateActivePost }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Article);
 
 Article.propTypes = {
-  updateBlogPosts: PropTypes.func,
-  blogPosts: PropTypes.array,
+  updateActivePost: PropTypes.func,
+  activePost: PropTypes.object,
   location: PropTypes.object
 };

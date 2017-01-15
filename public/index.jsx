@@ -26,16 +26,17 @@ const App = () => {
       <Router history={history}>
         <Route path="/" component={Main}>
           <IndexRoute component={Home} />
-          <Router path="/blog" component={Blog} />
-          <Router path="/article" component={Article} />
-          <Router path="/portfolio" component={Portfolio} />
-          <Router path="*" component={Home} />
+          <Route path="blog" component={Blog} />
+          <Route path="blog/:title" component={Article} />
+          <Route path="portfolio" component={Portfolio} />
+          <Route path="*" component={Home} />
         </Route>
       </Router>
     </Provider>
   );
 };
 
+// <Route path="article" component={Article} />
 
 ReactDOM.render(
   <App />,
