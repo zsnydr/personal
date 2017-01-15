@@ -1,4 +1,3 @@
-const db = require('../mongo/connection');
 const Project = require('../mongo/models').Project;
 const BlogPost = require('../mongo/models').BlogPost;
 

@@ -19,6 +19,7 @@ const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 const store = createStoreWithMiddleware(rootReducer);
 const history = syncHistoryWithStore(browserHistory, store);
 
+
 const App = () => {
   return (
     <Provider store={store}>
@@ -35,7 +36,6 @@ const App = () => {
   );
 };
 
-// <Router path="/resume" component={Resume} />
 
 ReactDOM.render(
   <App />,

@@ -13,30 +13,30 @@ const navigateTo = (eventKey) => {
 
 const Navigation = () => {
   return (
-    <div className="nav">
-      <Navbar collapseOnSelect className="nav-bar navbar navbar-default navbar-fixed-top">
-        <Navbar.Toggle />
-        <Navbar.Collapse>
-          <Nav className="links" pullLeft onSelect={navigateTo}>
-            <NavItem eventKey="">home</NavItem>
-          </Nav>
-          <Nav className="links" onSelect={navigateTo}>
-            <NavItem eventKey="blog">blog</NavItem>
-            <NavItem eventKey="portfolio">portfolio</NavItem>
-            <NavItem eventKey="ZackSnyder_Resume.pdf">resume</NavItem>
-          </Nav>
-          <Nav className="links" pullRight onSelect={navigateTo}>
-            <NavItem eventKey="https://github.com/zsnydr">
-              <i className="fa fa-github about-links" />
-            </NavItem>
-            <NavItem eventKey="https://www.linkedin.com/in/zack-snyder-a5795332">
-              <i className="fa fa-linkedin-square about-links" />
-            </NavItem>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+    <Navbar collapseOnSelect className="nav-bar navbar-fixed-top">
+      <Navbar.Toggle />
+      <Navbar.Collapse>
+        <Nav className="links" pullLeft onSelect={navigateTo}>
+          <NavItem eventKey="">home</NavItem>
+        </Nav>
+        <Nav className="links" onSelect={navigateTo}>
+          <NavItem eventKey="blog">blog</NavItem>
+          <NavItem eventKey="portfolio">portfolio</NavItem>
+          <NavItem eventKey="ZackSnyder_Resume.pdf">resume</NavItem>
+        </Nav>
+        <Nav className="links" pullRight onSelect={navigateTo}>
+          <NavItem eventKey="https://github.com/zsnydr">
+            <i className="fa fa-github about-links" />
+          </NavItem>
+          <NavItem eventKey="https://www.linkedin.com/in/zack-snyder-a5795332">
+            <i className="fa fa-linkedin-square about-links" />
+          </NavItem>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
+// <div className="nav">
+// </div>
 export default Navigation;

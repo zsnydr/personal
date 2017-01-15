@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 
-const ProjectSchema = new mongoose.Schema({
+const ProjectSchema = mongoose.Schema({
   title: String,
   summary: String,
   description: String,
   link: String
 });
 
-const BlogPostSchema = new mongoose.Schema({
+const BlogPostSchema = mongoose.Schema({
   title: String,
   summary: String,
   body: String,

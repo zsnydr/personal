@@ -8,7 +8,11 @@ const Main = (props) => {
   return (
     <div className="main">
       <Navigation />
-      {props.children}
+      <div className="col-md-1 main-grey" />
+      <div className="col-md-10 main-white">
+        {props.children}
+      </div>
+      <div className="col-md-1 main-grey" />
     </div>
   );
 };
