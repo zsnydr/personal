@@ -13,11 +13,10 @@ import Portfolio from './portfolio/components/portfolio';
 
 import rootReducer from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 const store = createStoreWithMiddleware(rootReducer);
 const history = syncHistoryWithStore(browserHistory, store);
-
 
 const App = () => {
   return (
