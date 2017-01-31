@@ -12,8 +12,8 @@ ReactDOM.render(
 );
 
 if (module.hot) {
-  module.hot.accept('./app.jsx', () => {
-    const NewApp = require('./app.jsx').default;
+  module.hot.accept('./app', () => {
+    const NewApp = require('./app').default;
     ReactDOM.render(
       <AppContainer>
         <NewApp />
