@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
+const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const router = require('./server/router');
@@ -14,19 +15,10 @@ const app = express();
 const expressRouter = express.Router();
 const compiler = webpack(webpackConfig);
 
-app.set('port', process.env.PORT || 3000);
-
 app.use(express.static(path.join(__dirname, '/dist')));
 
-app.use(webpackDevMiddleware(compiler, {
-  publicPath: webpackConfig.output.publicPath
-}));
-
-// app.use(webpackHot(compiler, {
-//   log: console.log,
-//   path: '/__webpack_hmr',
-//   heartbeat: 1 * 1000
-// }));
+app.use(webpackDevMiddleware(compiler));
+app.use(webpackHotMiddleware(compiler));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -37,6 +29,8 @@ router(expressRouter);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
+
+app.set('port', process.env.PORT || 3000);
 
 db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 

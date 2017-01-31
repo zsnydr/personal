@@ -3,7 +3,6 @@ const dbHelpers = require('./dbHelpers');
 
 module.exports = {
   getProjects: (req, res) => {
-    console.log('getProjects ', req)
     dbHelpers.getProjects()
     .then((projects) => {
       res.json(projects);

@@ -1,22 +1,33 @@
 const path = require('path');
-// const webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
   entry: [
-    // 'webpack-hot-middleware/client',
+    'webpack-hot-middleware/client',
+    'react-hot-loader/patch',
     './public/index.jsx',
     './public/styles/index.scss'
   ],
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   // plugins: [
-  //   new webpack.optimize.OccurenceOrderPlugin(),
-  //   new webpack.HotModuleReplacementPlugin(),
-  //   new webpack.NoErrorsPlugin()
+  // // Minify assets.
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     compress: {
+  //       warnings: false // https://github.com/webpack/webpack/issues/1496
+  //     }
+  //   })
   // ],
+  plugins: [
+    // new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
   module: {
     loaders: [{
       test: /\.jsx$/,
