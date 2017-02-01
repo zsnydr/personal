@@ -1,33 +1,48 @@
 .portfolio {
-  position: absolute;
-  height: 90%;
-  width: 95%;
-  // overflow: auto;
-  margin: 5% 2.5% 0% 2.5%;
+  width: 100%;
   background-color: white;
+  padding: 0% 1.5%;
 
-  .portfolio-project-list {
-    position: relative;
-    display: inline-block;
-    margin: 3% 5% 0% 5%;
+  .portfolio-content {
+    padding-top: 5%;
+    width: 100%;
     height: 100%;
-    width: 40%;
-    float: left;
 
-    .portfolio-project {
-      border: 2px solid #8A9299;
-      padding: 1%;
-      margin: 1%;
+    .portfolio-project-list {
+      display: inline-block;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .portfolio-active-project {
+      display: inline-block;
+      width: 50%;
+      margin: 0 auto;
     }
   }
-
-  .portfolio-active-project {
-    border: 2px solid #8A9299;
-    position: relative;
-    display: inline-block;
-    padding: 1% 1% 1% 1%;
-    margin: 3.5% 5% 0% 5%;
-    height: 85%;
-    width: 40%;
-  }
 }
+  // position: absolute;
+  // height: 90%;
+  // width: 95%;
+  // overflow: auto;
+  // margin: 5% 2.5% 0% 2.5%;
+  // background-color: white;
+
+  //   margin: 3% 5% 0% 5%;
+  //   height: 100%;
+  //   width: 40%;
+  //   float: left;
+  //
+  //   .portfolio-project {
+  //     border: 2px solid #8A9299;
+  //     padding: 1%;
+  //     margin: 1%;
+  //   }
+  // }
+  //
+  //   padding: 1% 1% 1% 1%;
+  //   margin: 3.5% 5% 0% 5%;
+  //   height: 85%;
+  //   width: 40%;
+  // }
+// }

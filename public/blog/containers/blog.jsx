@@ -32,14 +32,14 @@ class Blog extends Component {
 
   render() {
     if (!this.props.blogPosts.length) {
-      return (
-        <div>Waiting for blog posts...</div>
-      );
+      return <div className="blog" />;
     }
 
     return (
       <div className="blog">
-        <BlogPostList posts={this.props.blogPosts} navToArticle={this.navToArticle} />
+        <div className="blog-content">
+          <BlogPostList posts={this.props.blogPosts} navToArticle={this.navToArticle} />
+        </div>
       </div>
     );
   }
