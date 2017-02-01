@@ -5,10 +5,10 @@ const BlogPost = require('./models').BlogPost;
 
 
 Project.create({
-  title: 'Laughter proposal laughing',
-  summary: 'He an thing rapid these after going drawn or.',
+  title: 'Canopy',
+  summary: 'One stop shop for tenants and landlords alike.',
   description: 'Affronting imprudence do he he everything. Sex lasted dinner wanted indeed wished out law. Far advanced settling say finished raillery. Offered chiefly farther of my no colonel shyness. Such on help ye some door if in. Laughter proposal laughing any son law consider. Needed except up piqued an.',
-  link: 'https://www.google.com'
+  link: 'http://www.canopydev.com/'
 })
 .then((project) => {
   console.log('Created project: ', project.id);
@@ -18,10 +18,10 @@ Project.create({
 });
 
 Project.create({
-  title: 'Instrument cultivated',
-  summary: 'Expenses as material breeding insisted building to in.',
+  title: 'BakPak',
+  summary: 'Vacation Itinerary builder.',
   description: 'New the her nor case that lady paid read. Invitation friendship travelling eat everything the out two. Shy you who scarcely expenses debating hastened resolved. Always polite moment on is warmth spirit it to hearts. Downs those still witty an balls so chief so.',
-  link: 'https://www.google.com'
+  link: 'http://bakpakattak.herokuapp.com/'
 })
 .then((project) => {
   console.log('Created project: ', project.id);
@@ -31,10 +31,10 @@ Project.create({
 });
 
 Project.create({
-  title: 'Marianne',
-  summary: 'John draw real poor on call my from.',
+  title: 'Beacon',
+  summary: 'Dynamic help desk support.',
   description: 'Too cultivated use solicitude frequently. Dashwood likewise up consider continue entrance ladyship oh. Wrong guest given purse power is no. Friendship to connection an am considered difficulty. Country met pursuit lasting moments why calling certain the.',
-  link: 'https://www.google.com'
+  link: 'http://beacondev.herokuapp.com'
 })
 .then((project) => {
   console.log('Created project: ', project.id);
@@ -44,8 +44,8 @@ Project.create({
 });
 
 Project.create({
-  title: 'Respect forming',
-  summary: 'Its had resolving otherwise she contented therefore.',
+  title: 'ZackSnyder.com',
+  summary: 'Personal page you are currently viewing.',
   description: 'Wrote water woman of heart it total other. By in entirely securing suitable graceful at families improved. Zealously few furniture repulsive was agreeable consisted difficult. Collected breakfast estimable questions in to favourite it.',
   link: 'https://www.google.com'
 })

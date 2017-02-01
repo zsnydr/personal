@@ -6,13 +6,9 @@ import Navigation from './nav';
 
 const Main = (props) => {
   return (
-    <div className="main">
+    <div>
       <Navigation />
-      <div className="col-md-1 main-grey" />
-      <div className="col-md-10 main-white">
-        {props.children}
-      </div>
-      <div className="col-md-1 main-grey" />
+      {props.children}
     </div>
   );
 };

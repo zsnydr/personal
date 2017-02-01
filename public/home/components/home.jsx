@@ -1,28 +1,28 @@
 import React, { PropTypes } from 'react';
-import { browserHistory } from 'react-router';
-import { polyfill } from 'smoothscroll-polyfill';
+// import { browserHistory } from 'react-router';
+// import { polyfill } from 'smoothscroll-polyfill';
 
 import About from './about';
 
 
-polyfill();
+// polyfill();
 
 const Home = (props) => {
-  if (props.location.pathname !== '/') {
-    browserHistory.push('');
-  }
+  // if (props.location.pathname !== '/') {
+  //   browserHistory.push('');
+  // }
 
-  const scrollDown = () => {
-    document.querySelector('.home-about-me').scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
-
-  const scrollUp = () => {
-    document.querySelector('.nav').scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
+  // const scrollDown = () => {
+  //   document.querySelector('.home-about-me').scrollIntoView({
+  //     behavior: 'smooth'
+  //   });
+  // };
+  //
+  // const scrollUp = () => {
+  //   document.querySelector('.nav').scrollIntoView({
+  //     behavior: 'smooth'
+  //   });
+  // };
 
   return (
     <div className="home">
@@ -32,18 +32,14 @@ const Home = (props) => {
           <hr />
           <h3>Software Engineer</h3>
         </div>
-        <div className="home-arrow-down" onClick={scrollDown} />
+      </div>
+      <div className="home-about-me">
+        <About />
       </div>
     </div>
   );
 };
 
-// <div className="home-border2">
-//   <div className="home-about-me">
-//     <div className="home-arrow-up" onClick={scrollUp} />
-//     <About />
-//   </div>
-// </div>
 export default Home;
 
 Home.propTypes = {

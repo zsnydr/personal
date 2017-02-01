@@ -3,7 +3,6 @@
 
 ## NPM and BOWER ##
 node_modules/
-public/components/bower_components/
 
 ## config files ##
 db/config.js

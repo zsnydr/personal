@@ -23,15 +23,15 @@ class Article extends Component {
 
   render() {
     if (!this.props.activePost || this.props.activePost.pathTitle !== this.props.location.pathname.substring(6)) {
-      return (
-        <div>No active blog post</div>
-      );
+      return <div className="article" />;
     }
 
     return (
       <div className="article">
-        <ArticleHeader post={this.props.activePost} />
-        <ArticleBody post={this.props.activePost} />
+        <div className="article-content">
+          <ArticleHeader post={this.props.activePost} />
+          <ArticleBody post={this.props.activePost} />
+        </div>
       </div>
     );
   }

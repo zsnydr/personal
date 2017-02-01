@@ -20,8 +20,8 @@ const Navigation = () => {
           <NavItem eventKey="">home</NavItem>
         </Nav>
         <Nav className="links" onSelect={navigateTo}>
-          <NavItem eventKey="blog">blog</NavItem>
           <NavItem eventKey="portfolio">portfolio</NavItem>
+          <NavItem eventKey="blog">blog</NavItem>
           <NavItem eventKey="ZackSnyder_Resume.pdf">resume</NavItem>
         </Nav>
         <Nav className="links" pullRight onSelect={navigateTo}>
