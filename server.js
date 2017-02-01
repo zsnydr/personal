@@ -15,7 +15,7 @@ const app = express();
 const expressRouter = express.Router();
 const compiler = webpack(webpackConfig);
 
-app.use(express.static(path.join(__dirname, '/dist')));
+app.use('/dist', express.static(path.join(__dirname, '/dist')));
 
 app.use(webpackDevMiddleware(compiler));
 app.use(webpackHotMiddleware(compiler));
