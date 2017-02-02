@@ -17,8 +17,11 @@ const compiler = webpack(webpackConfig);
 
 app.use(express.static(path.join(__dirname, '/dist')));
 
-app.use(webpackDevMiddleware(compiler));
-app.use(webpackHotMiddleware(compiler));
+// only use dev middleware if working in development
+if (process.env.NODE_ENV !== 'production') {
+  app.use(webpackDevMiddleware(compiler));
+  app.use(webpackHotMiddleware(compiler));
+}
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
