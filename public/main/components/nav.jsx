@@ -4,8 +4,11 @@ import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 
 const navigateTo = (eventKey) => {
-  if (eventKey.substring(0, 5) === 'https' || eventKey === 'ZackSnyder_Resume.pdf') {
+  if (eventKey.substring(0, 5) === 'https') {
     window.location = eventKey;
+    return;
+  } else if (eventKey === 'ZackSnyder_Resume.pdf') {
+    window.location.pathname = eventKey;
     return;
   }
   browserHistory.push(`/${eventKey}`);

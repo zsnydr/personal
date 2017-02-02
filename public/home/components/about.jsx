@@ -9,7 +9,7 @@ const About = () => {
       </div>
       <div className="about-desc">
         <p>
-          I'm Zack. <br/>
+          I'm Zack. <br />
           I care about art and math. <br />
           Want to work together? I would love to hear from you.
         </p>
